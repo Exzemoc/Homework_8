@@ -21,6 +21,10 @@ class Auto:
 
 
 class Truck(Auto):
+    def __init__(self,max_load, brand, age, mark, color='Black', weight='2t', ):
+        super().__init__(brand, age, mark, color='Black', weight='2t', )
+        self.max_load = max_load
+
     def load(self):
         sleep(1)
         print('Load')
@@ -39,7 +43,7 @@ class Car(Auto):
         print(f'Max speed is {self.maxspeed}')
 
 
-t = Truck('Mersedes', 20, 'Actros', color='white', weight='18t')
+t = Truck('500 litres','Mersedes', 20, 'Actros', color='white', weight='18t')
 t.move()
 t.stop()
 t.load()
